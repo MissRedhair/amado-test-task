@@ -1,0 +1,104 @@
+@font-face{
+  font: {
+    family: "Montserrat-ExtraBold";
+    size: 50px;
+    weight: 800;
+  }
+  src: url("../fonts/montserrat/Montserrat-ExtraBold.ttf");
+}
+@font-face{
+  font: {
+    family: "Montserrat-Bold";
+    size: 16px;
+    weight: 700;
+  }
+  src: url("../fonts/montserrat/Montserrat-Bold.ttf");
+}
+@font-face{
+  font: {
+    family: "Montserrat-Regular";
+    size: 16px;
+    weight: 400;
+  }
+  src: url("../fonts/montserrat/Montserrat-Regular.ttf");
+}
+@font-face{
+  font: {
+    family: "Roboto-Bold";
+    size: 16px;
+    weight: 700;
+  }
+  src: url("../fonts/roboto/Roboto-Bold.ttf");
+}
+@font-face{
+  font: {
+    family: "Roboto-Medium";
+    size: 24px;
+    weight: 500;
+  }
+  src: url("../fonts/roboto/Roboto-Medium.ttf");
+}
+@font-face{
+  font: {
+    family: "Roboto-Regular";
+    size: 18px;
+    weight: 400;
+  }
+  src: url("../fonts/roboto/Roboto-Regular.ttf");
+}
+
+
+//MIXIN styles
+@mixin title-h1 {
+  font: {
+    family: "Montserrat-ExtraBold";
+  }
+  color: $base-color;
+}
+
+@mixin text-breadcrumbs {
+  font: {
+    family: "Montserrat-Regular";
+  }
+  color: $lite-gray;
+}
+
+@mixin subtitle-h5 {
+  font: {
+    family: "Roboto-Medium";
+  }
+  color: $base-color;
+}
+
+@mixin nav-text {
+  font: {
+    family: "Roboto-Bold";
+  }
+  color: $text-color;
+}
+
+@mixin text {
+  font: {
+    family: "Roboto-Regular";
+  }
+  color: $text-color;
+}
+
+@mixin ts($duration: 0.5s) {
+  transition: all --duration ease-out;
+}
+
+//общие стили
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.link{
+  text-decoration: none;
+}
+
+.container{
+  width: 1280px;
+  margin: 0 auto;
+}

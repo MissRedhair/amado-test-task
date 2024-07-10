@@ -1,0 +1,35 @@
+extends ~@layouts/layout
+
+block vars
+  - title = 'О бренде'
+
+block content
+  .container
+    .start-screen
+      i(aria-hidden="true").background-figure1
+      i(aria-hidden="true").background-figure2
+      i(aria-hidden="true").background-image
+      .bread-crumbs
+        a.bread-crumbs__home.link(href="#"): svg.home-icon(width="17" height="18" viewBox="0 0 17 18"  xmlns="http://www.w3.org/2000/svg"): path(d="M1.3667 6.72001V16.98H5.9667V12.42C5.9667 9.00001 11.7167 9.00001 11.7167 12.42V16.98H16.3167V6.72001L8.65003 0.640015L1.3667 6.72001Z" stroke-linejoin="round")
+        a.bread-crumbs__text.link(href="#"): <span>/</span> Наши бренды 
+        p.bread-crumbs__text: <span>/</span> Кардиола 
+      .content 
+        .content__block
+          h1.content__title.h1 Кардиола
+          h5.content__subtitle.h5 Забота о сердце для активной жизни
+          p.content__text.p Биологически активная добавка для здоровья сердца и активной жизни, в составе которой преобладают натуральные экстракты лекарственных растений и важные элементы, необходимые для заботы о сердце и сосудах.
+          .content__actions 
+            button.button Подробнее
+            a(href="#").content__actions__link.link Отзывы (15)
+          .slider-container
+            .slider-wrapper
+              input(type="radio" name="slider" id="radio1" checked)
+              input(type="radio" name="slider" id="radio2")
+              input(type="radio" name="slider" id="radio3")
+              input(type="radio" name="slider" id="radio4")
+              input(type="radio" name="slider" id="radio5")
+              .slider
+
+        .content_img 
+          img(src="images/introImg.png", alt="Кардиола")
+

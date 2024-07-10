@@ -1,0 +1,131 @@
+@import "../colors";
+
+@import "../default";
+
+.header{
+  background-color: #fff;
+  border-bottom: 1px solid #E0E0E0;
+
+    &__wrapper{
+      border-bottom: 2px solid #CEEEF2;
+    }
+
+      &__content{
+        width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+        &__logo-block {
+          display: flex;
+          align-items: center;
+          gap: 9px;
+          margin-bottom: 27px;
+          margin-top: 21px;
+        }
+
+        &__search-block{
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin-top: 6px;
+        }
+
+          &__input-box {
+            position: relative;
+          }
+            .search-icon{
+              width: 17px;
+              height: 17px;
+              position: absolute; 
+              top: 50%; 
+              left: 347px; 
+              transform: translateY(-50%);
+              transition: all 0.8s 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+            .input{
+              width: 366px;
+              height: 40px;
+              outline: none;
+              border: 1px solid #E0E0E0;
+              border-radius: 50px;
+              padding-left: 11px;
+              @include text;
+              @include ts;
+            } 
+            .input:focus{
+              border: 1px solid $lite-gray;
+            }
+            .close-icon{
+              background-image: url("../images/items/closeIcon.svg");
+              width: 18px;
+              height: 18px;
+              position: absolute; 
+              top: 50%; 
+              left: 373px; 
+              opacity: 0;
+              transform: translateY(-50%);
+            
+            } 
+
+          .like-icon{
+            stroke: $primary-color;
+            stroke-width: 1.5;
+            stroke-linejoin: round;
+            @include ts(0.5s);
+          }
+          .like-icon:hover{
+            fill: $primary-color;
+          }
+
+    &__nav{
+        width: 1280px;
+        margin: 0 auto;
+
+        .nav{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .nav-item{
+          width: 165px;
+          list-style: none;
+          padding-top: 24px;
+          padding-bottom: 25px;
+          text-align: center; 
+          
+          .nav-link{
+            @include nav-text;
+            @include ts(0.3s);
+            padding: 24px 0;
+
+            &:hover{
+              color: $primary-color;
+            cursor: pointer;
+            }
+          }
+        }
+        .nav-item:nth-child(1){
+          background-color: rgba(70, 192, 193, 0.2);
+          padding: 24px 52px;
+        }
+        .nav-item:nth-child(1)::before{
+          background-image: url('../images/items/burgerMenu.svg');
+          background-repeat: no-repeat;
+          width: 16px;
+          height: 13px;
+        }
+        .nav-item:nth-child(7)::before{
+          background-image: url('../images/items/mapIcon.svg');
+          background-repeat: no-repeat;
+          width: 13px;
+          height: 18px;
+        }
+        .nav-item:hover{
+          border-bottom: 2px solid $primary-color;
+        }
+    }      
+}
